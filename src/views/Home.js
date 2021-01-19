@@ -32,8 +32,8 @@ class Home extends React.Component {
                 <div class="body">
 
                     <div style={{}}>
-                        <h2 class="ant-typography">Browse Courses</h2>
-                        <span class="ant-typography ant-typography-secondary" style={{fontSize: '18px'}}>See when each AP/Dual Credit class meets below</span>
+                        <h2 class="ant-typography">AP/Dual Credit Showcase Night - 1/20/21</h2>
+                        <span class="ant-typography ant-typography-secondary" style={{fontSize: '18px'}}>See when each class meets below</span>
                     </div>
                     <br></br>
                     <div style={{fontSize: "14px"}, {paddingBottom: "0px"}}>
