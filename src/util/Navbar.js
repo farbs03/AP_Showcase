@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 import logo from '../static/hseapps.png'
 import { Typography} from 'antd';
+import {motion} from 'framer-motion'
 
 const {Title , Text} = Typography
 
