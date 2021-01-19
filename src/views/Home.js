@@ -18,12 +18,10 @@ for(var i = 0; i < length2; i++) {
     sec2[i].Email = "mailto:" + sec2[i].Email;
 }
 const HSEApps = (
-    <div style={{fontSize: "14px"}}>
-        <p style={{textAlign: 'center'}}>Made by HSE Apps</p>
-        <div class="social-container">
-            <a href='' class="social"><InstagramOutlined/></a>
-            <a href='' class="social"><GithubOutlined/></a>
-        </div>
+    <div style={{fontSize: "14px"}, {paddingBottom: "0px"}}>
+        <p style={{textAlign: 'center'}, {display: 'inline-block'}}>Made by HSE Apps</p>
+        <a href='https://www.instagram.com/hseapps/' target='_blank' class="social"><InstagramOutlined/></a>
+        <a href='https://github.com/HSE-Apps' target='_blank' class="social"><GithubOutlined/></a>
     </div>
 )
 class Home extends React.Component {
@@ -38,6 +36,11 @@ class Home extends React.Component {
                         <span class="ant-typography ant-typography-secondary" style={{fontSize: '18px'}}>See when each AP/Dual Credit class meets below</span>
                     </div>
                     <br></br>
+                    <div style={{fontSize: "14px"}, {paddingBottom: "0px"}}>
+                        <p style={{textAlign: 'center'}, {display: 'inline-block'}}>Made by HSE Apps</p>
+                        <a href='https://www.instagram.com/hseapps/' target='_blank' class="social"><InstagramOutlined/></a>
+                        <a href='https://github.com/HSE-Apps' target='_blank' class="social"><GithubOutlined/></a>
+                    </div>
                     <div class="slots">
 
                         <div class='time-slot' id="section1" style={{display: 'block'}}>
