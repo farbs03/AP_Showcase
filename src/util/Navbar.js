@@ -1,10 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
 
 import logo from '../static/hseapps.png'
-import { Typography, Button, Avatar} from 'antd';
-import { UserOutlined, HomeOutlined, CompassOutlined } from '@ant-design/icons';
-import {motion} from 'framer-motion'
+import { Typography} from 'antd';
 
 const {Title , Text} = Typography
 

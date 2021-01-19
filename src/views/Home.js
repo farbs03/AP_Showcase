@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, Typography, Card, Divider, Row, Col, Skeleton, Popover} from 'antd';
+import { Card, Divider, Row, Col, Popover} from 'antd';
 import Navbar from '../util/Navbar'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {MailOutlined, LinkOutlined, GithubOutlined, InstagramOutlined} from '@ant-design/icons'
 
 import '../util/Navbar.js'
