@@ -68,7 +68,6 @@ class Home extends React.Component {
                             </a>
                         </Dropdown>
                     </div>
-                    <br></br>
                     <div class="slots">
 
                         <div class='time-slot' id="section1" style={{display: 'block'}}>
