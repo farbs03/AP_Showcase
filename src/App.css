@@ -39,3 +39,8 @@
 .ant-popover-inner-content {
   padding-bottom: 0px;
 }
+.overview {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
