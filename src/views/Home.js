@@ -72,20 +72,19 @@ class Home extends React.Component {
 
                         <div class='time-slot' id="section1" style={{display: 'block'}}>
                             <Divider orientation='left'><h2 style={{display: "inline-block"}}>6:30pm-7:30pm</h2><Divider type='vertical'/><a style={{display: "inline-block"}}href="#section2">Go to 7:30-8:30</a></Divider>
+                            <span class="ant-typography ant-typography-secondary" style={{fontSize: '16px'}}>If part of the course name is cut off, click on the title area to see the entire name</span>
                             <Row gutter={length1}>
                                 {sec1.map((course) => {
                                     return <Col className="gutter-row" span={6}>
-                                        <Popover content={HSEApps} title={course.Course} trigger="click">
-                                            <Card 
-                                            hoverable
-                                            extra={<a href={course.Zoom}>Zoom <LinkOutlined/></a>}
-                                            title={course.Course}
-                                            style={{ borderRadius: "20px", marginBottom: "20px"}}>
-                                                <p>{course.Time}</p>
-                                                <p>Teacher: {course.Teacher}</p>
-                                                <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
-                                            </Card>
-                                        </Popover>
+                                        <Card 
+                                        hoverable
+                                        extra={<a href={course.Zoom}>Zoom <LinkOutlined/></a>}
+                                        title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                        style={{ borderRadius: "20px", marginBottom: "20px"}}>
+                                            <p>{course.Time}</p>
+                                            <p>Teacher: {course.Teacher}</p>
+                                            <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                        </Card>
                                     </Col>
                                 })}
                             </Row>

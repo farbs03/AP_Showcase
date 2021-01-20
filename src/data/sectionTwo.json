@@ -7,13 +7,6 @@
     "Zoom": "https://hseschools-org.zoom.us/j/94893582224?pwd=cDJsNlJWOEd2dWlxblVCSk5YQXk0dz09"
     },
     {
-    "Email": "jalano@hse.k12.in.us",
-    "Teacher": "Julie Alano",
-    "Course": "AP COMPUTER SCIENCE PRINCIPLES/AP COMPUTER SCIENCE A",
-    "Time": "8:00pm-8:30pm",
-    "Zoom": "https://hseschools-org.zoom.us/j/98765430080?pwd=UUlUSmZ3UWE4c2VjYlMwUmd5WW9oUT09"
-    },
-    {
     "Email": "jcarson@hse.k12.in.us",
     "Teacher": "Jacquie Carson",
     "Course": "AP RESEARCH",
@@ -33,6 +26,13 @@
     "Course": "AP SEMINAR",
     "Time": "8:00pm-8:30pm",
     "Zoom": "https://hseschools-org.zoom.us/j/95957324029?pwd=Z2NNT1M2OTFxeWNhSXZ3SDBYUlJ2UT09"
+    },
+    {
+    "Email": "jalano@hse.k12.in.us",
+    "Teacher": "Julie Alano",
+    "Course": "AP COMPUTER SCIENCE PRINCIPLES/AP COMPUTER SCIENCE A",
+    "Time": "8:00pm-8:30pm",
+    "Zoom": "https://hseschools-org.zoom.us/j/98765430080?pwd=UUlUSmZ3UWE4c2VjYlMwUmd5WW9oUT09"
     },
     {
     "Email": "nmathews@hse.k12.in.us",
