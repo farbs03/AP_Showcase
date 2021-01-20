@@ -90,9 +90,12 @@ class Home extends React.Component {
                         title={<h3 style={{fontSize: "20px"}, {marginBottom: "0px"}}>Overview</h3>}
                         style={{borderRadius: "20px"}, {marginBottom: "20px"}, {width: "100%"}}>
                             <p>Welcome to Hamilton Southeastern High School’s AP/Dual Credit and Academic Specialty Virtual Showcase! Tonight’s program is designed to provide you with information about course offerings in Advanced Placement, Dual Credit, and Academic Specialty Program areas. You will get the opportunity to hear from and speak with several teachers of these classes and programs by participating in live Zoom sessions scheduled below. These live Zoom sessions will be offered in half-hour increments, starting at 6:30pm and ending at 8:30pm. In addition, links are provided below to a pre-recorded presentation, as well as a panel discussion, in which students and teachers involved in these types of classes and programs share their experiences and insights, along with representatives from IU-Bloomington, Ball State, Butler, and Ivy Tech Community College, who share information about their programs. Our goal is to equip you to make the best decisions as you plan for the future. We hope you enjoy the program. Have a great evening!</p>
-                            <a href="https://youtu.be/Z9ZfmOA-JiQ">AP/Dual Credit & Academic Specialty Showcase Recorded Presentation <LinkOutlined /></a>
+                            <a href="https://youtu.be/Z9ZfmOA-JiQ" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Recorded Presentation <LinkOutlined /></a>
                             <br></br>
-                            <a href="https://youtu.be/u_qeyd9WL48">AP/Dual Credit & Academic Specialty Showcase Recorded Panel Discussion <LinkOutlined /></a>
+                            <a href="https://youtu.be/u_qeyd9WL48" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Recorded Panel Discussion <LinkOutlined /></a>
+                            <br></br>
+                            <a href="https://hhs.hseschools.org/MediaLibraries/HHS/HHS-Website-Docs/Course%20Guide/AP-Dual-Credit-Academic-Specialty-Showcase-Presentation-2021.pdf" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Recorded Powerpoint <LinkOutlined /></a>
+                            <br></br>
                         </Card>
                     </div>
                     <br></br>
