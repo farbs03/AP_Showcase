@@ -1,12 +1,14 @@
 import React from 'react';
-import { Card, Divider, Row, Col, Popover, Dropdown, Menu, List } from 'antd';
+import { Card, Divider, Popover, Dropdown, Menu, List, Tabs } from 'antd';
 import Navbar from '../util/Navbar'
-import {MailOutlined, LinkOutlined, GithubOutlined, InstagramOutlined, DownOutlined} from '@ant-design/icons'
+import {MailOutlined, LinkOutlined, GithubOutlined, InstagramOutlined, DownOutlined, TeamOutlined} from '@ant-design/icons'
 
 import '../util/Navbar.js'
 
 import sec1 from '../data/sectionOne.json'
 import sec2 from '../data/sectionTwo.json'
+
+const { TabPane } = Tabs;
 
 function dynamicSort(property) {
     var sortOrder = 1;
@@ -45,8 +47,9 @@ for(var i = 0; i < length2; i++) {
 
 const HSEApps = () => (
     <div style={{fontSize: "14px"}, {paddingBottom: "0px"}, {display: "inline-block"}}>
-        <p style={{textAlign: 'center'}, {display: 'inline-block'}}>Made by HSE Apps</p>
-        <a href='https://www.instagram.com/hseapps/' target='_blank' class="social"><InstagramOutlined/></a>
+        <p style={{textAlign: 'center'}, {display: 'inline-block'}}>Made by HSE Apps&nbsp;</p>
+        <a href='https://hseapps.org' target='_blank' class="social"><TeamOutlined/></a><Divider type='vertical' className="social-bar"/>
+        <a href='https://www.instagram.com/hseapps/' target='_blank' class="social"><InstagramOutlined/></a><Divider type='vertical' className="social-bar"/>
         <a href='https://github.com/HSE-Apps' target='_blank' class="social"><GithubOutlined/></a>
     </div>
 )
@@ -92,9 +95,11 @@ class Home extends React.Component {
                             <p>Welcome to Hamilton Southeastern High School’s AP/Dual Credit and Academic Specialty Virtual Showcase! Tonight’s program is designed to provide you with information about course offerings in Advanced Placement, Dual Credit, and Academic Specialty Program areas. You will get the opportunity to hear from and speak with several teachers of these classes and programs by participating in live Zoom sessions scheduled below. These live Zoom sessions will be offered in half-hour increments, starting at 6:30pm and ending at 8:30pm. In addition, links are provided below to a pre-recorded presentation, as well as a panel discussion, in which students and teachers involved in these types of classes and programs share their experiences and insights, along with representatives from IU-Bloomington, Ball State, Butler, and Ivy Tech Community College, who share information about their programs. Our goal is to equip you to make the best decisions as you plan for the future. We hope you enjoy the program. Have a great evening!</p>
                             <a href="https://youtu.be/Z9ZfmOA-JiQ" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Recorded Presentation <LinkOutlined /></a>
                             <br></br>
+                            <br></br>
                             <a href="https://youtu.be/u_qeyd9WL48" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Recorded Panel Discussion <LinkOutlined /></a>
                             <br></br>
-                            <a href="https://hhs.hseschools.org/MediaLibraries/HHS/HHS-Website-Docs/Course%20Guide/AP-Dual-Credit-Academic-Specialty-Showcase-Presentation-2021.pdf" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Recorded Powerpoint <LinkOutlined /></a>
+                            <br></br>
+                            <a href="https://hhs.hseschools.org/MediaLibraries/HHS/HHS-Website-Docs/Course%20Guide/AP-Dual-Credit-Academic-Specialty-Showcase-Presentation-2021.pdf" target='_blank'>AP/Dual Credit & Academic Specialty Showcase Powerpoint <LinkOutlined /></a>
                             <br></br>
                         </Card>
                     </div>
@@ -113,62 +118,153 @@ class Home extends React.Component {
                         <div class='time-slot' id="section1" style={{display: 'block'}}>
                             <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block"}}>6:30pm-7:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section2">Go to 7:30-8:30</a></Divider>
                             <span class="ant-typography ant-typography-secondary" style={{fontSize: '16px'}}>**If part of the course name is cut off, click on the title area to see the entire name</span>
-                            <List 
-                            grid = {{
-                                gutter: 16,
-                                xs: 1,
-                                sm: 1,
-                                md: 2,
-                                lg: 2,
-                                xl: 3,
-                                xxl: 3,
-                            }}
-                            dataSource={sec1}
-                            renderItem={course => (
-                                    <List.Item>
-                                        <Card 
-                                        hoverable
-                                        extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
-                                        title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
-                                        style={{ borderRadius: "20px", marginBottom: "20px"}}>
-                                            <p>{course.Time}</p>
-                                            <p>Teacher: {course.Teacher}</p>
-                                            <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
-                                        </Card>
-                                    </List.Item>
-                                )}
-                            />
+                            <Tabs defaultActiveKey="1" centered>
+                                <TabPane tab="Page 1" key="1">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec1.slice(0, 8)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                                <TabPane tab="Page 2" key="2">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec1.slice(8, 16)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                                <TabPane tab="Page 3" key="3">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec1.slice(16)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                            </Tabs>
                         </div>
-
+                        <br></br>
                         <div class='time-slot' id="section2" style={{display: 'block'}}>
                             <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
-                            <List 
-                            grid = {{
-                                gutter: 16,
-                                xs: 1,
-                                sm: 1,
-                                md: 2,
-                                lg: 2,
-                                xl: 3,
-                                xxl: 3,
-                            }}
-                            dataSource={sec2}
-                            renderItem={course => (
-                                    <List.Item>
-                                        <Card 
-                                        hoverable
-                                        extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
-                                        title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
-                                        style={{ borderRadius: "20px", marginBottom: "20px"}}>
-                                            <p>{course.Time}</p>
-                                            <p>Teacher: {course.Teacher}</p>
-                                            <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
-                                        </Card>
-                                    </List.Item>
-                                )}
-                            />
+                            <Tabs defaultActiveKey="1" centered>
+                                <TabPane tab="Page 1" key="1">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec2.slice(0, 8)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                                <TabPane tab="Page 2" key="2">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec2.slice(8)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                            </Tabs>
                         </div>
-
+                        <br></br>
+                        <br></br>
+                        <br></br>
                     </div>
 
                 </div>

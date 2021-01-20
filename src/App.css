@@ -9,6 +9,7 @@
 }
 .time-slot {
   display: flex;
+  margin: 0px 12px
 }
 .time {
   flex: 1;
@@ -43,4 +44,8 @@
   display: block;
   margin: auto;
   width: 90%;
+}
+.social-bar {
+  border-left: 1px solid rgb(0 0 0 / 15%);
+  margin: 0px 2px;
 }
