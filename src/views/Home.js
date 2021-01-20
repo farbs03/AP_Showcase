@@ -129,7 +129,7 @@ class Home extends React.Component {
                                         <Card 
                                         hoverable
                                         extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
-                                        title={<Popover content={HSEApps} title={course.Course}>{course.Course}</Popover>}
+                                        title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
                                         style={{ borderRadius: "20px", marginBottom: "20px"}}>
                                             <p>{course.Time}</p>
                                             <p>Teacher: {course.Teacher}</p>
@@ -158,7 +158,7 @@ class Home extends React.Component {
                                         <Card 
                                         hoverable
                                         extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
-                                        title={<Popover content={HSEApps} title={course.Course}>{course.Course}</Popover>}
+                                        title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
                                         style={{ borderRadius: "20px", marginBottom: "20px"}}>
                                             <p>{course.Time}</p>
                                             <p>Teacher: {course.Teacher}</p>
