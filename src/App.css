@@ -5,7 +5,7 @@
 }
 .body {
   text-align: left;
-  margin: 40px;
+  margin: 30px;
 }
 .time-slot {
   display: flex;
@@ -42,5 +42,5 @@
 .overview {
   display: block;
   margin: auto;
-  width: 60%;
+  width: 90%;
 }
