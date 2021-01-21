@@ -230,7 +230,7 @@ class Home extends React.Component {
                         </div>
                         <br></br>
                         
-                        <Divider orientation='left'  id="section2" style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
+                        <Divider orientation='left'  id="section2" style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block", fontSize: "18px"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
                         <div class='time-slot' style={{display: 'block'}}>    
                             <Tabs defaultActiveKey="1" centered>
                                 <TabPane tab="Page 1" key="1">
