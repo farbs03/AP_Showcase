@@ -129,7 +129,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec1.slice(0, 9)}
+                                    dataSource={sec1.slice(0, 6)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -156,7 +156,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec1.slice(9, 18)}
+                                    dataSource={sec1.slice(6, 12)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -173,6 +173,33 @@ class Home extends React.Component {
                                     />
                                 </TabPane>
                                 <TabPane tab="Page 3" key="3">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec1.slice(12, 18)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                                <TabPane tab="Page 4" key="4">
                                     <List 
                                     grid = {{
                                         gutter: 16,
@@ -217,7 +244,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec2.slice(0, 9)}
+                                    dataSource={sec2.slice(0, 6)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -244,7 +271,34 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec2.slice(9)}
+                                    dataSource={sec2.slice(6, 12)}
+                                    renderItem={course => (
+                                            <List.Item>
+                                                <Card 
+                                                hoverable
+                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
+                                                style={{ borderRadius: "20px", margin: "10px 10px"}}>
+                                                    <p>{course.Time}</p>
+                                                    <p>Teacher: {course.Teacher}</p>
+                                                    <a href={course.Email}><MailOutlined/> {(course.Email).split("mailto:")}</a>
+                                                </Card>
+                                            </List.Item>
+                                        )}
+                                    />
+                                </TabPane>
+                                <TabPane tab="Page 3" key="3">
+                                    <List 
+                                    grid = {{
+                                        gutter: 16,
+                                        xs: 1,
+                                        sm: 1,
+                                        md: 2,
+                                        lg: 2,
+                                        xl: 3,
+                                        xxl: 3,
+                                    }}
+                                    dataSource={sec2.slice(12)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -262,6 +316,13 @@ class Home extends React.Component {
                                 </TabPane>
                             </Tabs>
                         </div>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
                         <br></br>
                         <br></br>
                         <br></br>
