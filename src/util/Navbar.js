@@ -14,7 +14,7 @@ const Navbar = () => {
     <div style={{backgroundColor: 'white', borderBottom: 'solid 1px rgba(0,0,0,0.1)'}}>
       <div style = {{padding: '10px', display:"flex", justifyContent:"space-between", alignItems:"center"}}>
         
-        <div style={{display: "flex", alignItems: "center", width:"250px"}}>
+        <div style={{display: "flex", alignItems: "center", width:"500px"}}>
           <Link to="/">
             <motion.img whileHover={{ scale: 1.05 }} src={logo} style={{height: "45px", marginRight:"4px", marginLeft:"10px"}}></motion.img>
           </Link>
