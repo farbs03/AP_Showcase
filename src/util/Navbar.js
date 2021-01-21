@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/">
             <motion.img whileHover={{ scale: 1.05 }} src={logo} style={{height: "45px", marginRight:"4px", marginLeft:"10px"}}></motion.img>
           </Link>
-          <Title level={3} style={{margin: "0px auto"}}>HSE Virtual Showcase</Title>
+          <Title level={3} style={{margin: "0px 0px 0px 5px"}}>HSE Virtual Showcase</Title>
         </div>
       </div>
 
