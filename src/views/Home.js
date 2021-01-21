@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Divider, Popover, Dropdown, Menu, List, Tabs } from 'antd';
+import { Card, Divider, Popover, Dropdown, Menu, List, Tabs, Skeleton } from 'antd';
 import Navbar from '../util/Navbar'
 import {MailOutlined, LinkOutlined, GithubOutlined, InstagramOutlined, DownOutlined, TeamOutlined} from '@ant-design/icons'
 
@@ -84,7 +84,7 @@ class Home extends React.Component {
                 <Navbar></Navbar>
                 <div class="body">
 
-                    <h2 class="ant-typography" style={{display: "inline-block"}}>HSE AP / Dual Credit & Academic Specialty Virtual Showcase - 1/21/21</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><HSEApps/>
+                    <h2 class="ant-typography" style={{display: "inline-block"}}>HSE AP / Dual Credit & Academic Specialty Virtual Showcase - 1/21/21 &nbsp;</h2><HSEApps/>
                     <br></br>
                     <br></br>
                     <div class="overview">
@@ -105,7 +105,7 @@ class Home extends React.Component {
                     </div>
                     <br></br>
                     <br></br>
-                    <span class="ant-typography ant-typography-secondary" style={{fontSize: '20px'}}>Join live Zoom Q&A sessions below or</span>
+                    <span class="ant-typography ant-typography-secondary" id="section1" style={{fontSize: '20px'}}>Join live Zoom Q&A sessions below or</span>
                     <br></br>
                     <Dropdown overlay={menu} trigger={['hover']}>
                         <a className="ant-dropdown-link" onClick={e => e.preventDefault()} style={{fontSize: "16px"}}>
@@ -114,9 +114,8 @@ class Home extends React.Component {
                     </Dropdown>
                     <br></br>
                     <div class="slots">
-
-                        <div class='time-slot' id="section1" style={{display: 'block'}}>
-                            <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block"}}>6:30pm-7:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section2">Go to 7:30-8:30</a></Divider>
+                        <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 30%);"}}><h2 style={{display: "inline-block", margin: "0px"}}>6:30pm-7:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section2">Go to 7:30-8:30</a></Divider>
+                        <div class='time-slot' style={{display: 'block'}}>
                             <span class="ant-typography ant-typography-secondary" style={{fontSize: '16px'}}>**If part of the course name is cut off, click on the title area to see the entire name</span>
                             <Tabs defaultActiveKey="1" centered>
                                 <TabPane tab="Page 1" key="1">
@@ -162,7 +161,7 @@ class Home extends React.Component {
                                             <List.Item>
                                                 <Card 
                                                 hoverable
-                                                extra={<a href={course.Zoom} target='_blank'>Zoom <LinkOutlined/></a>}
+                                                extra={<a href={course.Zoom} target='_blank'>&nbsp;Zoom <LinkOutlined/></a>}
                                                 title={<Popover content={HSEApps} title={course.Course} trigger="click">{course.Course}</Popover>}
                                                 style={{ borderRadius: "20px", margin: "10px 10px"}}>
                                                     <p>{course.Time}</p>
@@ -203,8 +202,9 @@ class Home extends React.Component {
                             </Tabs>
                         </div>
                         <br></br>
-                        <div class='time-slot' id="section2" style={{display: 'block'}}>
-                            <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
+                        
+                        <Divider orientation='left'  id="section2" style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
+                        <div class='time-slot' style={{display: 'block'}}>    
                             <Tabs defaultActiveKey="1" centered>
                                 <TabPane tab="Page 1" key="1">
                                     <List 
