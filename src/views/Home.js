@@ -129,7 +129,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec1.slice(0, 8)}
+                                    dataSource={sec1.slice(0, 9)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -156,7 +156,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec1.slice(8, 16)}
+                                    dataSource={sec1.slice(9, 18)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -183,7 +183,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec1.slice(16)}
+                                    dataSource={sec1.slice(18)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -217,7 +217,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec2.slice(0, 8)}
+                                    dataSource={sec2.slice(0, 9)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
@@ -244,7 +244,7 @@ class Home extends React.Component {
                                         xl: 3,
                                         xxl: 3,
                                     }}
-                                    dataSource={sec2.slice(8)}
+                                    dataSource={sec2.slice(9)}
                                     renderItem={course => (
                                             <List.Item>
                                                 <Card 
