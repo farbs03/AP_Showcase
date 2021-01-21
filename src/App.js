@@ -3,7 +3,6 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import Home from './views/Home.js'
-const course_name = "literature";
 
 const App = () => {
   return (
