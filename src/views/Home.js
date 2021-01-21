@@ -114,7 +114,7 @@ class Home extends React.Component {
                     </Dropdown>
                     <br></br>
                     <div class="slots">
-                        <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 30%);"}}><h2 style={{display: "inline-block", margin: "0px"}}>6:30pm-7:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section2">Go to 7:30-8:30</a></Divider>
+                        <Divider orientation='left' style={{borderTopColor: "rgb(0 0 0 / 30%);"}}><h2 style={{display: "inline-block", margin: "0px", fontSize: "22px"}}>6:30pm-7:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section2">Go to 7:30-8:30</a></Divider>
                         <div class='time-slot' style={{display: 'block'}}>
                             <span class="ant-typography ant-typography-secondary" style={{fontSize: '16px'}}>**If part of the course name is cut off, click on the title area to see the entire name</span>
                             <Tabs defaultActiveKey="1" centered>
@@ -230,7 +230,7 @@ class Home extends React.Component {
                         </div>
                         <br></br>
                         
-                        <Divider orientation='left'  id="section2" style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block", margin: "0px"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
+                        <Divider orientation='left'  id="section2" style={{borderTopColor: "rgb(0 0 0 / 15%);"}}><h2 style={{display: "inline-block", margin: "0px", fontSize: "22px"}}>7:30pm-8:30pm</h2><Divider type='vertical' style={{borderLeft: "1px solid rgb(0 0 0 / 15%)"}}/><a style={{display: "inline-block"}}href="#section1">Go back to 6:30-7:30</a></Divider>
                         <div class='time-slot' style={{display: 'block'}}>    
                             <Tabs defaultActiveKey="1" centered>
                                 <TabPane tab="Page 1" key="1">
